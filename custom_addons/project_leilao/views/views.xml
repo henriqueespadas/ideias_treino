@@ -1,0 +1,106 @@
+<odoo>
+    <!-- Produto -->
+    <data>
+        <!-- Produto -->
+        <record id="view_produto_tree" model="ir.ui.view">
+            <field name="name">produto.tree</field>
+            <field name="model">leilao.produto</field>
+            <field name="arch" type="xml">
+                <tree string="Produto">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="starting_price"/>
+                    <field name="auction_id"/>
+                </tree>
+            </field>
+        </record>
+        <data/>
+        <data>
+            <record id="view_produto_form" model="ir.ui.view">
+                <field name="name">produto.form</field>
+                <field name="model">leilao.produto</field>
+                <field name="arch" type="xml">
+                    <form string="Produto">
+                        <sheet>
+                            <group>
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="starting_price"/>
+                                <field name="auction_id"/>
+                                <field name="image" widget="image" options="{'size': [100, 100]}"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+        </data>
+        <data>
+            <!-- Lance -->
+            <record id="view_lance_tree" model="ir.ui.view">
+                <field name="name">lance.tree</field>
+                <field name="model">leilao.lance</field>
+                <field name="arch" type="xml">
+                    <tree string="Lance">
+                        <field name="user_id"/>
+                        <field name="product_id"/>
+                        <field name="bid_amount"/>
+                        <field name="bid_date"/>
+                    </tree>
+                </field>
+            </record>
+        </data>
+        <data>
+            <record id="view_lance_form" model="ir.ui.view">
+                <field name="name">lance.form</field>
+                <field name="model">leilao.lance</field>
+                <field name="arch" type="xml">
+                    <form string="Lance">
+                        <sheet>
+                            <group>
+                                <field name="user_id"/>
+                                <field name="product_id"/>
+                                <field name="bid_amount"/>
+                                <field name="bid_date"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+        </data>
+        <!-- Ações e itens de menu -->
+
+        <!-- Leilão -->
+        <data>
+            <record id="action_leilao" model="ir.actions.act_window">
+                <field name="name">Leilões</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">leilao.leilao</field>
+                <field name="view_mode">tree,form</field>
+            </record>
+        </data>
+
+        <menuitem id="menu_leilao_main" name="Leilão" sequence="10"/>
+        <menuitem id="menu_leilao" parent="menu_leilao_main" name="Leilões" action="action_leilao" sequence="10"/>
+
+        <!-- Produto -->
+        <record id="action_produto" model="ir.actions.act_window">
+            <field name="name">Produtos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">leilao.produto</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_produto" parent="menu_leilao_main" name="Produtos" action="action_produto" sequence="20"/>
+
+        <!-- Lance -->
+        <record id="action_lance" model="ir.actions.act_window">
+            <field name="name">Lances</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">leilao.lance</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_lance" parent="menu_leilao_main" name="Lances" action="action_lance" sequence="30"/>
+    </data>
+</odoo>
+

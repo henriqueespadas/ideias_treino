@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Team Menu and Actions -->
+    <record id="team_action" model="ir.actions.act_window">
+        <field name="name">Teams</field>
+        <field name="res_model">football.manager.team</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Player Menu and Actions -->
+    <record id="player_action" model="ir.actions.act_window">
+        <field name="name">Players</field>
+        <field name="res_model">football.manager.player</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Championship Action -->
+    <record id="action_championship" model="ir.actions.act_window">
+        <field name="name">Championships</field>
+        <field name="res_model">football.manager.championship</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+<!--     Match Action-->
+    <record id="action_match" model="ir.actions.act_window">
+        <field name="name">Matches</field>
+        <field name="res_model">football.manager.match</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+<!--    Menus-->
+    <menuitem id="main_menu" name="Football Manager" sequence="10"/>
+
+    <menuitem id="team_menu" name="Teams" parent="main_menu" action="team_action" sequence="1"/>
+    <menuitem id="player_menu" name="Players" parent="main_menu" action="player_action" sequence="2"/>
+    <menuitem id="menu_match" name="Matches" parent="main_menu" action="action_match" sequence="40"/>
+    <menuitem id="menu_championship" name="Championships" parent="main_menu" action="action_championship" sequence="30" />
+
+
+</odoo>

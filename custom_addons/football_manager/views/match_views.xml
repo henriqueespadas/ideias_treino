@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Match Form View -->
+        <record id="view_match_form" model="ir.ui.view">
+            <field name="name">match.form</field>
+            <field name="model">football.manager.match</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="simulate_match" string="Simular Partida" type="object" class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="championship_id"/>
+                            <field name="date"/>
+                            <field name="state"/>
+                        </group>
+                        <group>
+                            <field name="home_team_id"/>
+                            <field name="home_team_score"/>
+                            <field name="result"/>
+                        </group>
+                        <group>
+                            <field name="away_team_id"/>
+                            <field name="away_team_score"/>
+                        </group>
+                        <group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Match Tree View -->
+        <record id="view_match_tree" model="ir.ui.view">
+            <field name="name">match.tree</field>
+            <field name="model">football.manager.match</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="championship_id"/>
+                    <field name="date"/>
+                    <field name="home_team_id"/>
+                    <field name="home_team_score"/>
+                    <field name="away_team_id"/>
+                    <field name="away_team_score"/>
+                    <field name="state"/>
+                    <field name="result"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

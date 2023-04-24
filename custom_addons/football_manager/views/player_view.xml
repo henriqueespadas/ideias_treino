@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="player_form_view" model="ir.ui.view">
+        <field name="name">Player Form</field>
+        <field name="model">football.manager.player</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="position"/>
+                        <field name="age"/>
+                        <field name="team_id"/>
+                        <field name="salary"/>
+                    </group>
+                    <group colspan="4" string="Skills">
+                        <group>
+                            <field name="attack"/>
+                            <field name="defense"/>
+                            <field name="shooting"/>
+                            <field name="passing"/>
+                            <field name="speed"/>
+                        </group>
+                        <group>
+                            <field name="stamina"/>
+                            <field name="strength"/>
+                            <field name="ball_control"/>
+                            <field name="dribbling"/>
+                            <field name="crossing"/>
+                        </group>
+                        <group>
+                            <field name="heading"/>
+                            <field name="marking"/>
+                            <field name="tackling"/>
+                            <field name="positioning"/>
+                            <field name="vision"/>
+                        </group>
+                        <group>
+                            <field name="free_kick"/>
+                            <field name="penalty_kick"/>
+                            <field name="corner_kick"/>
+                            <field name="reflexes"/>
+                            <field name="communication"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="player_tree_view" model="ir.ui.view">
+        <field name="name">Player List</field>
+        <field name="model">football.manager.player</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="position"/>
+                <field name="age"/>
+                <field name="team_id"/>
+            </tree>
+        </field>
+    </record>
+    <!-- ... -->
+</odoo>

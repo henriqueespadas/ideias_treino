@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_leilao_leilao,leilao.leilao,model_leilao_leilao,base.group_user,1,1,1,1
+access_leilao_produto,leilao.produto,model_leilao_produto,base.group_user,1,1,1,1
+access_leilao_lance,leilao.lance,model_leilao_lance,base.group_user,1,1,1,1
