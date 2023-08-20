@@ -1,0 +1,10 @@
+<odoo>
+
+    <menuitem id="menu_magnata_global" name="Magnata Global" sequence="10"/>
+
+    <menuitem id="menu_players" name="Players" action="action_show_players" sequence="10" parent="menu_magnata_global"/>
+    <menuitem id="menu_markets" name="Markets" action="action_show_markets" sequence="20" parent="menu_magnata_global"/>
+    <menuitem id="menu_transactions" name="Transactions" action="action_show_transactions" sequence="30" parent="menu_magnata_global"/>
+    <menuitem id="menu_assets" name="Assets" action="action_show_assets" sequence="40" parent="menu_magnata_global"/>
+
+</odoo>

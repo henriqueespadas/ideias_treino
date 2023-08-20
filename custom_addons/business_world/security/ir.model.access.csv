@@ -1,0 +1,4 @@
+id,name,model_access,name_access,category_id/id,perm_read,perm_write,perm_create,perm_unlink
+group_business_world,Grupo Business World,"business.world",,,1,1,1,1
+group_business_world_market_event,Grupo Business World Market Event,"business.world.market.event'company'",,,1,1,1,1
+group_business_world_company,Grupo Business World Company,"business.world.company",,,1,1,1,1

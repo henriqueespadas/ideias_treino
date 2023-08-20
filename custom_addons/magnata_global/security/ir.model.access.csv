@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+csv_mg_market,MG Market,magnata_global.model_magnata_global_market,,1,1,1,1
+csv_mg_player,MG Player,magnata_global.model_magnata_global_player,,1,1,1,1
+csv_mg_transaction,MG Transaction,magnata_global.model_magnata_global_transaction,,1,1,1,1
+csv_mg_asset,MG Asset,magnata_global.model_magnata_global_asset,,1,1,1,1
+csv_mg_asset_update,MG Asset Update,magnata_global.model_magnata_global_asset_update,,1,1,1,1

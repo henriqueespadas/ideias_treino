@@ -1,0 +1,33 @@
+<odoo>
+
+    <record id="view_business_world_market_event_form" model="ir.ui.view">
+        <field name="name">business.world.market.event.form</field>
+        <field name="model">business.world.market.event</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="impact"/>
+                        <field name="magnitude"/>
+                    </group>
+                    <!-- Você pode adicionar mais campos e grupos conforme necessário -->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_business_world_market_event_tree" model="ir.ui.view">
+        <field name="name">business.world.market.event.tree</field>
+        <field name="model">business.world.market.event</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="impact"/>
+                <field name="magnitude"/>
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>

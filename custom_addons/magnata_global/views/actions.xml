@@ -1,0 +1,28 @@
+<odoo>
+
+    <record id="action_show_players" model="ir.actions.act_window">
+        <field name="name">Players</field>
+        <field name="res_model">magnata.global.player</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_show_markets" model="ir.actions.act_window">
+        <field name="name">Markets</field>
+        <field name="res_model">magnata.global.market</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_show_transactions" model="ir.actions.act_window">
+        <field name="name">Transactions</field>
+        <field name="res_model">magnata.global.transaction</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_show_assets" model="ir.actions.act_window">
+        <field name="name">Assets</field>
+        <field name="res_model">magnata.global.asset</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

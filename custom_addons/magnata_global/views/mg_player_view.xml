@@ -1,0 +1,29 @@
+<odoo>
+
+    <record id="view_player_form" model="ir.ui.view">
+        <field name="name">magnata.global.player.form</field>
+        <field name="model">magnata.global.player</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="balance"/>
+                        <field name="skills"/>
+                        <field name="level"/>
+                        <field name="experience"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_show_players" model="ir.actions.act_window">
+        <field name="name">Players</field>
+        <field name="res_model">magnata.global.player</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<record id="ir_cron_update_assets" model="ir.cron">
+    <field name="name">Atualizar Ativos</field>
+    <field name="model_id" ref="model_magnata_global_asset_update"/>
+    <field name="state">code</field>
+    <field name="code">model.update_assets()</field>
+    <field name="interval_number">5</field>
+    <field name="interval_type">minutes</field>
+    <field name="numbercall">-1</field>
+</record>
+</odoo>

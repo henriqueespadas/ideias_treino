@@ -1,0 +1,12 @@
+<odoo>
+
+    <menuitem id="menu_business_world_root" name="Business World"/>
+    <menuitem id="menu_business_world_company" name="Companies" parent="menu_business_world_root"
+              action="action_business_world_company"/>
+    <menuitem id="menu_business_world_product" name="Products" parent="menu_business_world_root"
+              action="action_business_world_product"/>
+    <menuitem id="menu_business_world_market_event" name="Market Events" parent="menu_business_world_root"
+              action="action_business_world_market_event"/>
+
+
+</odoo>
