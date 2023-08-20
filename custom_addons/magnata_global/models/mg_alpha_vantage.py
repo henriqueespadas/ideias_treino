@@ -1,6 +1,7 @@
 from odoo import models, fields
 import requests
 
+
 class AlphaVantageAPI:
     ALPHA_VANTAGE_ENDPOINT = "https://www.alphavantage.co/query"
 
@@ -17,6 +18,7 @@ class AlphaVantageAPI:
         response = requests.get(self.ALPHA_VANTAGE_ENDPOINT, params=params)
         data = response.json()
 
-        price = data['Time Series (5min)'][list(data['Time Series (5min)'].keys())[0]]['1. open']
+        price = data["Time Series (5min)"][list(data["Time Series (5min)"].keys())[0]][
+            "1. open"
+        ]
         return float(price)
-
