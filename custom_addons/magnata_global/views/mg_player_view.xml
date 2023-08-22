@@ -9,7 +9,6 @@
                     <group>
                         <field name="name"/>
                         <field name="balance"/>
-                        <field name="skills"/>
                         <field name="level"/>
                         <field name="experience"/>
                     </group>
@@ -18,12 +17,17 @@
         </field>
     </record>
 
-    <record id="action_show_players" model="ir.actions.act_window">
-        <field name="name">Players</field>
-        <field name="res_model">magnata.global.player</field>
-        <field name="view_mode">tree,form</field>
+    <record id="view_player_tree" model="ir.ui.view">
+        <field name="name">magnata.global.player.tree</field>
+        <field name="model">magnata.global.player</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="balance"/>
+                <field name="level"/>
+                <field name="experience"/>
+            </tree>
+        </field>
     </record>
-
-
 
 </odoo>

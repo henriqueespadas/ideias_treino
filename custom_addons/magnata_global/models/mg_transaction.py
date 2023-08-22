@@ -36,6 +36,7 @@ class MagnataGlobalTransaction(models.Model):
     @api.model
     def create(self, vals):
         player = self.env['magnata.global.player'].browse(vals['player_id'])
+        asset = self.env['magnata.global.asset'].browse(vals['asset_id'])
         asset_price = vals.get('price')
         amount = vals.get('amount')
         total = asset_price * amount
@@ -43,6 +44,8 @@ class MagnataGlobalTransaction(models.Model):
         if vals.get('transaction_type') == "buy":
             if player.balance < total:
                 raise UserError("Você não tem saldo suficiente")
+            if amount < asset.volume:
+                raise UserError("Não tem volume suficiente disponível para compra")
             player.balance -= total
             player.write({'balance': player.balance})
         elif vals.get('transaction_type') == "sell":
