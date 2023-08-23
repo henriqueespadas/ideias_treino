@@ -6,8 +6,6 @@ class MagnataGlobalTransaction(models.Model):
     _name = "magnata.global.transaction"
     _description = "Transaction in Global Magnate Game"
 
-    player_id = fields.Many2one("magnata.global.player", string="Player", required=True)
-    market_id = fields.Many2one("magnata.global.market", string="Market", required=True)
     transaction_type = fields.Selection(
         [
             ("buy", "Buy"),
@@ -19,38 +17,45 @@ class MagnataGlobalTransaction(models.Model):
     balance_player = fields.Float(string="Seu saldo", related="player_id.balance")
     amount = fields.Float(string="Amount", required=True)
     price = fields.Float(string="Price", required=True)
+    total = fields.Float(string="Total", compute="_compute_total", store=True)
     date = fields.Datetime(string="Transaction Date", default=fields.Datetime.now)
     asset_id = fields.Many2one("magnata.global.asset", string="Asset", required=True)
-    total = fields.Float(string="Total", compute="_compute_total", store=True)
+    player_id = fields.Many2one("magnata.global.player", string="Player", required=True)
+    market_id = fields.Many2one("magnata.global.market", string="Market", required=True)
 
-    @api.depends('amount', 'price')
+    @api.depends("amount", "price")
     def _compute_total(self):
         for record in self:
             record.total = record.amount * record.price
 
-    @api.onchange('asset_id')
+    @api.onchange("asset_id")
     def _onchange_asset_id(self):
         if self.asset_id:
             self.price = self.asset_id.price
 
     @api.model
     def create(self, vals):
-        player = self.env['magnata.global.player'].browse(vals['player_id'])
-        asset = self.env['magnata.global.asset'].browse(vals['asset_id'])
-        asset_price = vals.get('price')
-        amount = vals.get('amount')
+        player = self.env["magnata.global.player"].browse(vals["player_id"])
+        asset = self.env["magnata.global.asset"].browse(vals["asset_id"])
+        asset_price = vals.get("price")
+        amount = vals.get("amount")
         total = asset_price * amount
-
-        if vals.get('transaction_type') == "buy":
+        if vals.get("transaction_type") == "buy":
             if player.balance < total:
                 raise UserError("Você não tem saldo suficiente")
-            if amount < asset.volume:
+            if amount > asset.volume:
                 raise UserError("Não tem volume suficiente disponível para compra")
             player.balance -= total
-            player.write({'balance': player.balance})
-        elif vals.get('transaction_type') == "sell":
+            player.write({"balance": player.balance})
+            portfolio_vals = {
+                "player_id": player.id,
+                "asset_id": asset.id,
+                "quantity": amount,
+                "purchase_price": asset_price,
+            }
+            self.env["magnata.global.portfolio"].create(portfolio_vals)
+        elif vals.get("transaction_type") == "sell":
             player.balance += total
-            player.write({'balance': player.balance})
+            player.write({"balance": player.balance})
 
         return super(MagnataGlobalTransaction, self).create(vals)
-

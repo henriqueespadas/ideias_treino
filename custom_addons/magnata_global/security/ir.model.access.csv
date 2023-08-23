@@ -4,3 +4,4 @@ csv_mg_player,MG Player,magnata_global.model_magnata_global_player,,1,1,1,1
 csv_mg_transaction,MG Transaction,magnata_global.model_magnata_global_transaction,,1,0,1,1
 csv_mg_asset,MG Asset,magnata_global.model_magnata_global_asset,,1,1,1,1
 csv_mg_asset_update,MG Asset Update,magnata_global.model_magnata_global_asset_update,,1,1,1,1
+csv_mg_portfolio,MG Portfolio,magnata_global.model_magnata_global_portfolio,,1,1,1,1

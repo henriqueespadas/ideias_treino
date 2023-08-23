@@ -12,6 +12,28 @@
                         <field name="level"/>
                         <field name="experience"/>
                     </group>
+                    <notebook>
+                        <page string="Transações">
+                            <field name="transactions_ids" widget="one2many_list" options="{'reload_on_button': True}">
+                                <tree editable="bottom">
+                                    <field name="transaction_type"/>
+                                    <field name="asset_id"/>
+                                    <field name="amount"/>
+                                    <field name="price"/>
+                                    <field name="total"/>
+                                    <field name="create_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Ativos">
+                            <field name="portfolio_ids" widget="one2many_list" options="{'reload_on_button': True}">
+                                <tree editable="bottom">
+                                    <field name="asset_id"/>
+                                    <field name="quantity"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

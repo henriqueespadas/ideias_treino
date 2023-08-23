@@ -7,4 +7,3 @@ class MagnataGlobalAsset(models.Model):
     symbol = fields.Char(string="Símbolo")
     price = fields.Float(string="Preço Atual")
     volume = fields.Integer(string="Volume")
-
