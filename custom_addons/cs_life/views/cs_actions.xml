@@ -1,0 +1,7 @@
+<odoo>
+    <record id="action_cs_match" model="ir.actions.act_window">
+        <field name="name">Matches</field>
+        <field name="res_model">cs.match</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

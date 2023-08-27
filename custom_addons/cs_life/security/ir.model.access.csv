@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+cs_match_csv,cs.match.csv,model_cs_match,,1,1,1,1
+cs_team_csv,cs.team.csv,model_cs_team,,1,1,1,1
+cs_event_csv,cs.event.csv,model_cs_event,,1,1,1,1
