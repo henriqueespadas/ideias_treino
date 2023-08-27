@@ -12,8 +12,8 @@
         'views/cs_event_view.xml',
         'views/cs_match_view.xml',
         'views/cs_team_view.xml',
-        'views/cs_menus.xml',
         'views/cs_actions.xml',
+        'views/cs_menus.xml',
         'data/ir_cron_fetch_cs_data.xml'
     ],
     'installable': True,
