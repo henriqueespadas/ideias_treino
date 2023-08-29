@@ -1,4 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 csg_match_csv,csg.match.csv,model_csg_match,,1,1,1,1
-csg_opponent_csv,csg.csg_opponent_csv.csv,model_csg_opponent_csv,,1,1,1,1
+csg_opponent_csv,csg.csg_opponent_csv.csv,model_csg_opponent,,1,1,1,1
 

@@ -10,10 +10,10 @@ class Opponent(models.Model):
     location = fields.Char(string='Localização')
     name = fields.Char(string='Nome')
     slug = fields.Char(string='Slug')
-    type = fields.Selection([
-        ('team', 'Equipe'),
-        ('player', 'Jogador')
-    ], string='Tipo', default='team')
+    # type = fields.Selection([
+    #     ('team', 'Equipe'),
+    #     ('player', 'Jogador')
+    # ], string='Tipo', default='team')
     match_ids = fields.Many2many('csg.match', string='Partidas')
 
     @api.model
@@ -28,6 +28,6 @@ class Opponent(models.Model):
             'location': opponent_json['opponent'].get('location', False),
             'name': opponent_json['opponent']['name'],
             'slug': opponent_json['opponent']['slug'],
-            'type': opponent_json['type'],
+            # 'type': opponent_json['type'],
         }
         return self.create(values)
