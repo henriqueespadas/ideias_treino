@@ -8,6 +8,7 @@
                     <group>
                         <field name="time"/>
                         <field name="event_id"/>
+                        <field name="maps"/>
                     </group>
                     <notebook>
                         <page string="Teams">

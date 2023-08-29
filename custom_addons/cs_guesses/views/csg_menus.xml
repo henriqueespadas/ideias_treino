@@ -1,0 +1,4 @@
+<odoo>
+    <menuitem id="cs_life_menu" name="CS:GO Guesses" sequence="1"/>
+    <menuitem id="cs_match_menu" name="Mathes" parent="cs_life_menu" action="action_cs_match" sequence="1"/>
+</odoo>
