@@ -11,7 +11,7 @@ class PandaAPIIntegration(models.Model):
     def fetch_matches(self):
         url = "https://api.pandascore.co/matches"
         headers = {
-            'Authorization': 'Bearer rdaUrUaKvb_kG6Af5OH-zjyxELyX0cktU5t6sQPU9ySawpDtGBg',
+            'Authorization': 'Bearer d6dg_fLFTi_R0jfdTa6qfnZNNf3rQtPTrdJ-9G4zOhGN7hix36I',
         }
 
         response = requests.request("GET", url, headers=headers)
