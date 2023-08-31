@@ -4,4 +4,10 @@
         <field name="res_model">csg.match</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <record id="action_csg_opponent" model="ir.actions.act_window">
+        <field name="name">Oponentes</field>
+        <field name="res_model">csg.opponent</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 </odoo>

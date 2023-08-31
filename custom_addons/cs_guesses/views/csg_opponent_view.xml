@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<!--    <record id="csg_opponent_view_form" model="ir.ui.view">-->
-<!--        <field name="name">csg.team.form</field>-->
-<!--        <field name="model">csg.team</field>-->
-<!--        <field name="arch" type="xml">-->
-<!--            <form string="Team Form">-->
-<!--                <sheet>-->
-<!--                    <group>-->
-<!--                        <field name="name"/>-->
-<!--                        <field name="logo"/>-->
-<!--                    </group>-->
-<!--                </sheet>-->
-<!--            </form>-->
-<!--        </field>-->
-<!--    </record>-->
+    <record id="view_csg_opponent_tree" model="ir.ui.view">
+        <field name="name">csg.opponent.tree</field>
+        <field name="model">csg.opponent</field>
+        <field name="arch" type="xml">
+            <tree string="Oponentes">
+                <field name="opponent_id"/>
+                <field name="acronym"/>
+                <field name="image_url"/>
+                <field name="location"/>
+                <field name="name"/>
+                <field name="slug"/>
+                <field name="type"/>
+            </tree>
+        </field>
+    </record>
 </odoo>
