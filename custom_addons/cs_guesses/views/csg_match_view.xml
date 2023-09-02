@@ -1,24 +1,40 @@
 <odoo>
+
+    <record id="csg_match_view_tree" model="ir.ui.view">
+        <field name="name">csg.match.tree</field>
+        <field name="model">csg.match</field>
+        <field name="arch" type="xml">
+            <tree string="Match Tree">
+                <field name="begin_at"/>
+                <field name="detailed_stats"/>
+                <field name="status"/>
+                <field name="match_id"/>
+                <field name="id"/>
+            </tree>
+        </field>
+    </record>
     <record id="cs_match_view_form" model="ir.ui.view">
         <field name="name">csg.match.form</field>
         <field name="model">csg.match</field>
         <field name="arch" type="xml">
             <form string="Match Form">
                 <sheet>
-<!--                    <group>-->
-<!--                        <field name="time"/>-->
-<!--                        <field name="event_id"/>-->
-<!--                        <field name="maps"/>-->
-<!--                    </group>-->
-<!--                    <notebook>-->
-<!--                        <page string="Teams">-->
-<!--                            <field name="team_ids">-->
-<!--                                <tree>-->
-<!--                                    <field name="name"/>-->
-<!--                                </tree>-->
-<!--                            </field>-->
-<!--                        </page>-->
-<!--                    </notebook>-->
+                    <group>
+                        <field name="begin_at"/>
+                        <field name="detailed_stats"/>
+                        <field name="status"/>
+                    </group>
+                    <notebook>
+                        <page string="Oponentes">
+                            <field name="opponents" widget="many2many" options="{'no_create': True}">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <button type="object" string="Abrir" name="button_open_opponent"
+                                            class="oe_highlight"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

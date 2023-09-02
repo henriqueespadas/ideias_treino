@@ -28,3 +28,14 @@ class Opponent(models.Model):
             'type': opponent_json['type'],
         }
         return self.create(values)
+
+    def button_open_opponent(self):
+        self.ensure_one()
+        return {
+            'name': 'Abrir Oponente',
+            'type': 'ir.actions.act_window',
+            'res_model': 'csg.opponent',
+            'view_mode': 'form',
+            'res_id': self.id,
+            'target': 'current',
+        }

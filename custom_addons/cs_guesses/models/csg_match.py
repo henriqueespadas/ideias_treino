@@ -51,6 +51,7 @@ class CSMatch(models.Model):
             'serie_id': match_json['serie']['id'],
             'serie_begin_at': self.convert_datetime(match_json['serie']['begin_at']),
             'serie_end_at': self.convert_datetime(match_json['serie']['end_at']),
+            'opponents': [(6, 0, [self.env['csg.opponent'].create_from_json(opponent_json).id for opponent_json in match_json['opponents']])]
         }
 
         values = {key: val for key, val in values.items() if val is not None}

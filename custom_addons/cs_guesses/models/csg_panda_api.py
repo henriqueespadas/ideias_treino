@@ -11,20 +11,17 @@ class PandaAPIIntegration(models.Model):
     def fetch_matches(self):
         url = "https://api.pandascore.co/matches"
         headers = {
-            'Authorization': 'Bearer d6dg_fLFTi_R0jfdTa6qfnZNNf3rQtPTrdJ-9G4zOhGN7hix36I',
+            'Authorization': 'Bearer VMtgjbl1xdCQfALgkvvycBTPTL0LmCS_eij22kFCKza6vudZNOk',
         }
 
         response = requests.request("GET", url, headers=headers)
-        print(response.status_code)
         if response.status_code == 200:
             matches_data = response.json()
             for match_json in matches_data:
-                match = self.env['csg.match'].create_from_json(match_json)
-                print('match', match)
-
+                self.env['csg.match'].create_from_json(match_json)
                 for opponent_json in match_json['opponents']:
-                    opponent = self.env['csg.opponent'].create_from_json(opponent_json)
-                    print('opponent', opponent)
+                    self.env['csg.opponent'].create_from_json(opponent_json)
+
 
 
 
