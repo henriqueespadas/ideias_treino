@@ -9,6 +9,7 @@
                 <field name="detailed_stats"/>
                 <field name="status"/>
                 <field name="match_id"/>
+                <field name="league_name"/>
                 <field name="id"/>
             </tree>
         </field>
@@ -23,6 +24,7 @@
                         <field name="begin_at"/>
                         <field name="detailed_stats"/>
                         <field name="status"/>
+                        <field name="league_name"/>
                     </group>
                     <notebook>
                         <page string="Oponentes">

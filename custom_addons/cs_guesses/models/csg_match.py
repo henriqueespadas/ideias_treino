@@ -34,26 +34,53 @@ class CSMatch(models.Model):
 
     @api.model
     def create_from_json(self, match_json):
-        values = {
-            'begin_at': self.convert_datetime(match_json['begin_at']),
-            'detailed_stats': match_json['detailed_stats'],
-            'draw': match_json['draw'],
-            'end_at': self.convert_datetime(match_json['end_at']),
-            'forfeit': match_json['forfeit'],
-            'game_advantage': match_json['game_advantage'],
-            'match_id': match_json['id'],
-            'name': match_json['name'],
-            'number_of_games': match_json['number_of_games'],
-            'scheduled_at': self.convert_datetime(match_json['scheduled_at']),
-            'status': match_json['status'],
-            'league_id': match_json['league']['id'],
-            'league_name': match_json['league']['name'],
-            'serie_id': match_json['serie']['id'],
-            'serie_begin_at': self.convert_datetime(match_json['serie']['begin_at']),
-            'serie_end_at': self.convert_datetime(match_json['serie']['end_at']),
-            'opponents': [(6, 0, [self.env['csg.opponent'].create_from_json(opponent_json).id for opponent_json in match_json['opponents']])]
-        }
+        match_id = match_json['id']
+        existing_match = self.env['csg.match'].search([('match_id', '=', match_id)], limit=1)
 
-        values = {key: val for key, val in values.items() if val is not None}
+        if existing_match:
+            vals_to_update = {
+                'begin_at': self.convert_datetime(match_json['begin_at']),
+                'detailed_stats': match_json['detailed_stats'],
+                'draw': match_json['draw'],
+                'end_at': self.convert_datetime(match_json['end_at']),
+                'forfeit': match_json['forfeit'],
+                'game_advantage': match_json['game_advantage'],
+                'name': match_json['name'],
+                'number_of_games': match_json['number_of_games'],
+                'scheduled_at': self.convert_datetime(match_json['scheduled_at']),
+                'status': match_json['status'],
+                'league_id': match_json['league']['id'],
+                'league_name': match_json['league']['name'],
+                'serie_id': match_json['serie']['id'],
+                'serie_begin_at': self.convert_datetime(match_json['serie']['begin_at']),
+                'serie_end_at': self.convert_datetime(match_json['serie']['end_at']),
+                'opponents': [(6, 0, [self.env['csg.opponent'].create_from_json(opponent_json).id for opponent_json in match_json['opponents']])]
+            }
 
-        return self.create(values)
+            vals_to_update = {key: val for key, val in vals_to_update.items() if val is not None}
+            existing_match.write(vals_to_update)
+            return existing_match
+        else:
+            values = {
+                'begin_at': self.convert_datetime(match_json['begin_at']),
+                'detailed_stats': match_json['detailed_stats'],
+                'draw': match_json['draw'],
+                'end_at': self.convert_datetime(match_json['end_at']),
+                'forfeit': match_json['forfeit'],
+                'game_advantage': match_json['game_advantage'],
+                'match_id': match_id,
+                'name': match_json['name'],
+                'number_of_games': match_json['number_of_games'],
+
+                'scheduled_at': self.convert_datetime(match_json['scheduled_at']),
+                'status': match_json['status'],
+                'league_id': match_json['league']['id'],
+                'league_name': match_json['league']['name'],
+                'serie_id': match_json['serie']['id'],
+                'serie_begin_at': self.convert_datetime(match_json['serie']['begin_at']),
+                'serie_end_at': self.convert_datetime(match_json['serie']['end_at']),
+                'opponents': [(6, 0, [self.env['csg.opponent'].create_from_json(opponent_json).id for opponent_json in match_json['opponents']])]
+            }
+
+            values = {key: val for key, val in values.items() if val is not None}
+            return self.create(values)
