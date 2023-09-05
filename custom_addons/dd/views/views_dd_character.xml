@@ -1,0 +1,33 @@
+<odoo>
+
+    <record id="form_dd_character" model="ir.ui.view">
+        <field name="name">dd.character.form</field>
+        <field name="model">dd.character</field>
+        <field name="arch" type="xml">
+            <form string="Personagem">
+                <sheet>
+                    <group>
+                        <field name="character_name"/>
+                        <field name="character_level"/>
+                        <field name="character_stamina"/>
+                        <field name="character_class_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="tree_dd_character" model="ir.ui.view">
+        <field name="name">dd.character.tree</field>
+        <field name="model">dd.character</field>
+        <field name="arch" type="xml">
+            <tree string="Personagens">
+                <field name="character_name"/>
+                <field name="character_level"/>
+                <field name="character_stamina"/>
+                <field name="character_class_id"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

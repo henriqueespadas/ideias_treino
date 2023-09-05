@@ -1,0 +1,32 @@
+<odoo>
+    <record id="form_dd_quest" model="ir.ui.view">
+        <field name="name">dd.quest.form</field>
+        <field name="model">dd.quest</field>
+        <field name="arch" type="xml">
+                <form string="Quests">
+                     <sheet>
+                          <group>
+                            <field name="quest_name"/>
+                            <field name="quest_description"/>
+                            <field name="quest_reward"/>
+                            <field name="quest_character_ids"/>
+                          </group>
+                     </sheet>
+                </form>
+        </field>
+    </record>
+
+    <record id="tree_dd_quest" model="ir.ui.view">
+        <field name="name">dd.quest.tree</field>
+        <field name="model">dd.quest</field>
+        <field name="arch" type="xml">
+            <tree string="Quests">
+                <field name="quest_name"/>
+                <field name="quest_description"/>
+                <field name="quest_reward"/>
+                <field name="quest_character_ids"/>
+            </tree>
+        </field>
+
+    </record>
+</odoo>

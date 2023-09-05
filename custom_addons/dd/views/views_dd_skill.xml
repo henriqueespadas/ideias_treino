@@ -1,0 +1,32 @@
+<odoo>
+
+    <record id="form_dd_skill" model="ir.ui.view">
+        <field name="name">dd.skill.form</field>
+        <field name="model">dd.skill</field>
+        <field name="arch" type="xml">
+                <form string="Skills">
+                     <sheet>
+                          <group>
+                            <field name="skill_name"/>
+                            <field name="skill_damage"/>
+                            <field name="skill_range"/>
+                            <field name="skill_class_id"/>
+                          </group>
+                     </sheet>
+                </form>
+        </field>
+    </record>
+
+    <record id="tree_dd_skill" model="ir.ui.view">
+        <field name="name">dd.skill.tree</field>
+        <field name="model">dd.skill</field>
+        <field name="arch" type="xml">
+            <tree string="Skills">
+                <field name="skill_name"/>
+                <field name="skill_damage"/>
+                <field name="skill_range"/>
+                <field name="skill_class_id"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

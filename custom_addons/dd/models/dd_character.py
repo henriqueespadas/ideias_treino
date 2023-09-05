@@ -9,7 +9,6 @@ class DDCharacter(models.Model):
     character_stamina = fields.Float(string='Energia', default=100)
     character_class_id = fields.Many2one('dd.class', string='Classe')
 
-
     def level_up(self):
         self.character_level += 1
         self.character_stamina = 100

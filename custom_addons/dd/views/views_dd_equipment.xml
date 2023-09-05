@@ -1,0 +1,31 @@
+<odoo>
+
+    <record id="form_dd_equipment" model="ir.ui.view">
+        <field name="name">dd.equipment.form</field>
+        <field name="model">dd.equipment</field>
+        <field name="arch" type="xml">
+               <form string="Equipamentos">
+                   <sheet>
+                       <group>
+                           <field name="equipment_name"/>
+                           <field name="equipment_type"/>
+                           <field name="equipment_class_id"/>
+                       </group>
+                   </sheet>
+               </form>
+        </field>
+    </record>
+
+    <record id="tree_dd_equipment" model="ir.ui.view">
+        <field name="name">dd.equipment.tree</field>
+        <field name="model">dd.equipment</field>
+        <field name="arch" type="xml">
+            <tree string="Equipamentos">
+                <field name="equipment_name"/>
+                <field name="equipment_type"/>
+                <field name="equipment_class_id"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

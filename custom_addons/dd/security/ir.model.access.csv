@@ -1,6 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 security_dd_character,security.dd.character,model_dd_character,,1,1,1,1
-security_dd_ddass,security.dd.ddass,model_dd_ddass,,1,1,1,1
+security_dd_class,security.dd.class,model_dd_class,,1,1,1,1
 security_dd_equipment,security.dd.equipment,model_dd_equipment,,1,1,1,1
 security_dd_quest,security.dd.quest,model_dd_quest,,1,1,1,1
 security_dd_skill,security.dd.skill,model_dd_skill,,1,1,1,1

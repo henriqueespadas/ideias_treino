@@ -1,0 +1,29 @@
+<odoo>
+
+    <record id="form_dd_class" model="ir.ui.view">
+        <field name="name">dd.class.form</field>
+        <field name="model">dd.class</field>
+        <field name="arch" type="xml">
+               <form string="Classes">
+                   <sheet>
+                       <group>
+                           <field name="class_name"/>
+                           <field name="class_skill"/>
+                       </group>
+                   </sheet>
+               </form>
+        </field>
+    </record>
+
+    <record id="tree_dd_class" model="ir.ui.view">
+        <field name="name">dd.class.tree</field>
+        <field name="model">dd.class</field>
+        <field name="arch" type="xml">
+            <tree string="Classes">
+                <field name="class_name"/>
+                <field name="class_skill"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

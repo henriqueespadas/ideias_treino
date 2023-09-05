@@ -9,6 +9,13 @@
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
+        'views/dd_actions.xml',
+        'views/dd_menus.xml',
+        'views/views_dd_character.xml',
+        'views/views_dd_class.xml',
+        'views/views_dd_equipment.xml',
+        'views/views_dd_quest.xml',
+        'views/views_dd_skill.xml',
     ],
     'installable': True,
     'auto_install': False,
