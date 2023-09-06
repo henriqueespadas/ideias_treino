@@ -6,4 +6,5 @@
     <menuitem id="menu_dd_equipment" name="Equipamentos" parent="menu_dd" action="action_dd_equipment" sequence="3"/>
     <menuitem id="menu_dd_quest" name="Quests" parent="menu_dd" action="action_dd_quest" sequence="4"/>
     <menuitem id="menu_dd_skill" name="Skills" parent="menu_dd" action="action_dd_skill" sequence="5"/>
+    <menuitem id="menu_dd_monster" name="Monstros" parent="menu_dd" action="action_dd_monster" sequence="6"/>
 </odoo>

@@ -1,0 +1,17 @@
+<odoo>
+    <record id="form_dd_monster" model="ir.ui.view">
+        <field name="name">dd.monster.form</field>
+        <field name="model">dd.monster</field>
+        <field name="arch" type="xml">
+               <form string="Monstros">
+                   <sheet>
+                       <group>
+                           <field name="monster_name"/>
+                           <field name="monster_type"/>
+                           <field name="monster_name"/>
+                       </group>
+                   </sheet>
+               </form>
+        </field>
+    </record>
+</odoo>
