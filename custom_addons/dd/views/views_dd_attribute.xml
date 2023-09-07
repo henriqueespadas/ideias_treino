@@ -1,0 +1,34 @@
+<odoo>
+
+    <record id="form_dd_attribute" model="ir.ui.view">
+        <field name="name">dd.attribute.form</field>
+        <field name="model">dd.attribute</field>
+        <field name="arch" type="xml">
+               <form string="Atributos">
+                   <sheet>
+                       <group>
+                           <field name="attribute_name"/>
+                           <field name="attribute_description"/>
+                           <field name="attribute_value"/>
+                           <field name="attribute_modifier"/>
+                           <field name="attribute_class_ids"/>
+                       </group>
+                   </sheet>
+               </form>
+        </field>
+    </record>
+
+    <record id="tree_dd_attribute" model="ir.ui.view">
+        <field name="name">dd.attribute.tree</field>
+        <field name="model">dd.attribute</field>
+        <field name="arch" type="xml">
+               <tree string="Atributos">
+                   <field name="attribute_name"/>
+                   <field name="attribute_description"/>
+                   <field name="attribute_value"/>
+                   <field name="attribute_modifier"/>
+                   <field name="attribute_class_ids"/>
+               </tree>
+        </field>
+    </record>
+</odoo>

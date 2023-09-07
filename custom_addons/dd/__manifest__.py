@@ -17,6 +17,7 @@
         'views/views_dd_quest.xml',
         'views/views_dd_skill.xml',
         'views/views_dd_monster.xml',
+        'views/views_dd_attribute.xml',
     ],
     'installable': True,
     'auto_install': False,
