@@ -4,17 +4,29 @@
         <field name="name">dd.attribute.form</field>
         <field name="model">dd.attribute</field>
         <field name="arch" type="xml">
-               <form string="Atributos">
-                   <sheet>
-                       <group>
-                           <field name="attribute_name"/>
-                           <field name="attribute_description"/>
-                           <field name="attribute_value"/>
-                           <field name="attribute_modifier"/>
-                           <field name="attribute_class_ids"/>
-                       </group>
-                   </sheet>
-               </form>
+            <form string="Atributos">
+                <sheet>
+                    <group>
+                        <field name="attribute_name"/>
+                        <field name="attribute_description"/>
+                        <field name="attribute_value"/>
+                        <field name="attribute_modifier"/>
+                    </group>
+                    <notebook>
+                        <page string="Personagens">
+                            <field name="attribute_character_ids" widget="many2many"
+                                   options="{'create': True, 'create_edit': True}">
+                                <tree editable="bottom">
+                                    <field name="character_name"/>
+                                    <field name="character_level"/>
+                                    <field name="character_stamina"/>
+                                    <field name="character_class_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
         </field>
     </record>
 
@@ -22,13 +34,13 @@
         <field name="name">dd.attribute.tree</field>
         <field name="model">dd.attribute</field>
         <field name="arch" type="xml">
-               <tree string="Atributos">
-                   <field name="attribute_name"/>
-                   <field name="attribute_description"/>
-                   <field name="attribute_value"/>
-                   <field name="attribute_modifier"/>
-                   <field name="attribute_class_ids"/>
-               </tree>
+            <tree string="Atributos">
+                <field name="attribute_name"/>
+                <field name="attribute_description"/>
+                <field name="attribute_value"/>
+                <field name="attribute_modifier"/>
+                <field name="attribute_class_ids"/>
+            </tree>
         </field>
     </record>
 </odoo>
