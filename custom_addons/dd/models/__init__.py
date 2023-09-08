@@ -4,4 +4,9 @@ from . import dd_equipment
 from . import dd_skill
 from . import dd_quest
 from . import dd_monster
-from . import dd_attribute
+from . import dd_attribute_charisma
+from . import dd_attribute_constitution
+from . import dd_attribute_dexterity
+from . import dd_attribute_intelligence
+from . import dd_attribute_strength
+from . import dd_attribute_wisdom

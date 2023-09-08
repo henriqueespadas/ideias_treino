@@ -12,19 +12,14 @@
                         <field name="character_stamina"/>
                         <field name="character_class_id"/>
                     </group>
-                    <notebook>
-                        <page string="Atributos">
-                            <field name="character_attribute_ids" widget="many2many"
-                                   options="{'create': True, 'create_edit': True}">
-                                <tree editable="bottom">
-                                    <field name="attribute_name"/>
-                                    <field name="attribute_description"/>
-                                    <field name="attribute_value"/>
-                                    <field name="attribute_modifier"/>
-                                </tree>
-                            </field>
-                        </page>
-                    </notebook>
+                    <group>
+                        <field name="character_attribute_charisma_value"/>
+                        <field name="character_attribute_constitution_value"/>
+                        <field name="character_attribute_dexterity_value"/>
+                        <field name="character_attribute_intelligence_value"/>
+                        <field name="character_attribute_strength_value"/>
+                        <field name="character_attribute_wisdom_value"/>
+                    </group>
                 </sheet>
             </form>
         </field>
