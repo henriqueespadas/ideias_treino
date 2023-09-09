@@ -6,7 +6,7 @@
     "description": "Dugeons & Dragons",
     "author": "Espadas",
     "website": "",
-    "depends": ["base"],
+    "depends": ["base", "website"],
     "data": [
         "security/ir.model.access.csv",
         "views/dd_actions.xml",
@@ -17,7 +17,7 @@
         "views/views_dd_quest.xml",
         "views/views_dd_skill.xml",
         "views/views_dd_monster.xml",
-        "views/views_dd_attribute.xml",
+        "src/xml/create_character_template.xml",
     ],
     "installable": True,
     "auto_install": False,

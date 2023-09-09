@@ -5,7 +5,6 @@ security_dd_equipment,security.dd.equipment,model_dd_equipment,,1,1,1,1
 security_dd_quest,security.dd.quest,model_dd_quest,,1,1,1,1
 security_dd_skill,security.dd.skill,model_dd_skill,,1,1,1,1
 security_dd_monster,security.dd.monster,model_dd_monster,,1,1,1,1
-security_dd_attribute,security.dd.attribute,model_dd_attribute,,1,1,1,1
 
 
 

@@ -1,0 +1,54 @@
+<odoo>
+    <template id="create_character_template">
+        <t t-call="website.layout">
+        <form action="/save_character" method="post">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+            <div class="form-group">
+                <label for="character_name">Nome</label>
+                <input type="text" class="form-control" id="character_name" name="character_name"
+                       placeholder="Nome do personagem"></input>
+            </div>
+            <div class="form-group">
+                <label for="character_level">Nível</label>
+                <input type="number" class="form-control" id="character_level" name="character_level"
+                       placeholder="Nível do personagem"></input>
+            </div>
+            <div class="form-group">
+                <label for="character_stamina">Vida</label>
+                <input type="number" class="form-control" id="character_stamina" name="character_stamina"
+                       placeholder="Vida do personagem"></input>
+            </div>
+<!--            <div class="form-group">-->
+<!--                <label for="character_class_id">Classe</label>-->
+<!--                <select class="form-control" id="character_class_id" name="character_class_id">-->
+<!--                    <t t-foreach="classes" t-as="class">-->
+<!--                        <option t-att-value="class.id">-->
+<!--                            <t t-esc="class.class_name"/>-->
+<!--                        </option>-->
+<!--                    </t>-->
+<!--                </select>-->
+<!--            </div>-->
+            <div class="form-group">
+                <label for="character_attribute_charisma_value">Carisma</label>
+                <input type="number" class="form-control" id="character_attribute_charisma_value"
+                       name="character_attribute_charisma_value" placeholder="Carisma do personagem"></input>
+            </div>
+            <div class="form-group">
+                <label for="character_attribute_constitution_value">Constituição</label>
+                <input type="number" class="form-control" id="character_attribute_constitution_value"
+                       name="character_attribute_constitution_value" placeholder="Constituição do personagem"></input>
+            </div>
+            <div class="form-group">
+                <label for="character_attribute_dexterity_value">Destreza</label>
+                <input type="number" class="form-control" id="character_attribute_dexterity_value"
+                       name="character_attribute_dexterity_value" placeholder="Destreza do personagem"></input>
+            </div>
+            <div class="form-group">
+                <label for="character_attribute_intelligence_value">Inteligência</label>
+                <input type="number" class="form-control" id="character_attribute_intelligence_value"
+                       name="character_attribute_intelligence_value" placeholder="Inteligência do personagem"></input>
+            </div>
+        </form>
+        </t>
+    </template>
+</odoo>

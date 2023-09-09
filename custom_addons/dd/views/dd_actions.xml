@@ -36,10 +36,4 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <record id="action_dd_attribute" model="ir.actions.act_window">
-        <field name="name">Atributos</field>
-        <field name="res_model">dd.attribute</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
 </odoo>

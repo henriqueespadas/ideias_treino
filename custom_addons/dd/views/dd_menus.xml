@@ -1,4 +1,5 @@
 <odoo>
+
     <menuitem id="menu_dd" name="Dungeons And Dragons" sequence="1"/>
 
     <menuitem id="menu_dd_character" name="Personagens" parent="menu_dd" action="action_dd_character" sequence="1"/>
@@ -7,6 +8,12 @@
     <menuitem id="menu_dd_quest" name="Quests" parent="menu_dd" action="action_dd_quest" sequence="4"/>
     <menuitem id="menu_dd_skill" name="Skills" parent="menu_dd" action="action_dd_skill" sequence="5"/>
     <menuitem id="menu_dd_monster" name="Monstros" parent="menu_dd" action="action_dd_monster" sequence="6"/>
-    <menuitem id="menu_dd_attribute" name="Atributos" parent="menu_dd" action="action_dd_attribute" sequence="7"/>
+
+    <record id="obras_menu" model="website.menu">
+        <field name="name">Dugeons And Dragons</field>
+        <field name="url">/create_character</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">20</field>
+    </record>
 
 </odoo>
