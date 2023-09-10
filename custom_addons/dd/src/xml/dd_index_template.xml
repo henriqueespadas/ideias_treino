@@ -1,0 +1,24 @@
+<odoo>
+    <template id="dd_index_template" name="Dungeons And Dragons">
+        <t t-call="website.layout">
+            <t t-set="title">Dungeons And Dragons</t>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Dungeons And Dragons</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="/create_character" class="btn btn-primary">Personagens</a>
+<!--                        <a href="/class" class="btn btn-primary">Classes</a>-->
+<!--                        <a href="/equipment" class="btn btn-primary">Equipamentos</a>-->
+<!--                        <a href="/quest" class="btn btn-primary">Quests</a>-->
+<!--                        <a href="/skill" class="btn btn-primary">Skills</a>-->
+<!--                        <a href="/monster" class="btn btn-primary">Monstros</a>-->
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

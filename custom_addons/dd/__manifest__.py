@@ -18,6 +18,7 @@
         "views/views_dd_skill.xml",
         "views/views_dd_monster.xml",
         "src/xml/create_character_template.xml",
+        "src/xml/dd_index_template.xml",
     ],
     "installable": True,
     "auto_install": False,

@@ -5,6 +5,12 @@ security_dd_equipment,security.dd.equipment,model_dd_equipment,,1,1,1,1
 security_dd_quest,security.dd.quest,model_dd_quest,,1,1,1,1
 security_dd_skill,security.dd.skill,model_dd_skill,,1,1,1,1
 security_dd_monster,security.dd.monster,model_dd_monster,,1,1,1,1
+security_dd_attribute_charisma,security.dd.attribute.charisma,model_dd_attribute_charisma,,1,1,1,1
+security_dd_attribute_constitution,security.dd.attribute.constitution,model_dd_attribute_constitution,,1,1,1,1
+security_dd_attribute_dexterity,security.dd.attribute.dexterity,model_dd_attribute_dexterity,,1,1,1,1
+security_dd_attribute_intelligence,security.dd.attribute.intelligence,model_dd_attribute_intelligence,,1,1,1,1
+security_dd_attribute_strength,security.dd.attribute.strength,model_dd_attribute_strength,,1,1,1,1
+security_dd_attribute_wisdom,security.dd.attribute.wisdom,model_dd_attribute_wisdom,,1,1,1,1
 
 
 

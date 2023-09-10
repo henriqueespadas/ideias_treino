@@ -11,7 +11,7 @@
 
     <record id="obras_menu" model="website.menu">
         <field name="name">Dugeons And Dragons</field>
-        <field name="url">/create_character</field>
+        <field name="url">/index</field>
         <field name="parent_id" ref="website.main_menu"/>
         <field name="sequence" type="int">20</field>
     </record>
