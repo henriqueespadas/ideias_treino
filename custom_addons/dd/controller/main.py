@@ -7,8 +7,6 @@ class MainController(http.Controller):
     def index(self, **kwargs):
         return request.render("dd.dd_index_template")
 
-
-class CharacterController(http.Controller):
     @http.route("/create_character", type="http", auth="user", website=True)
     def create_character(self, **kwargs):
         classes = request.env["dd.class"].sudo().search([])
@@ -100,4 +98,9 @@ class CharacterController(http.Controller):
         }
 
         request.env["dd.character"].sudo().create(vals)
-        return "Personagem criado"
+        return request.redirect("/list_characters")
+
+    @http.route("/list_characters", type="http", auth="user", website=True)
+    def list_characters(self, **kwargs):
+        characters = request.env["dd.character"].sudo().search([])
+        return request.render("dd.dd_list_characters_template", {"characters": characters})

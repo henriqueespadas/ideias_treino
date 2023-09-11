@@ -19,6 +19,7 @@
         "views/views_dd_monster.xml",
         "src/xml/create_character_template.xml",
         "src/xml/dd_index_template.xml",
+        "src/xml/dd_list_characters_template.xml",
     ],
     "installable": True,
     "auto_install": False,
