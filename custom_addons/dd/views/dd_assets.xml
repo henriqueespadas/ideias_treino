@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_frontend" name="Roll assets" inherit_id="web.assets_frontend">
+        <xpath expr="//link" position="before">
+            <script type="text/javascript" src="/dd/static/src/js/roll_dice.js"></script>
+        </xpath>
+    </template>
+</odoo>

@@ -1,6 +1,7 @@
 <odoo>
     <template id="create_character_template">
         <t t-call="website.layout">
+            <div class="container">
             <form action="/save_character" method="post">
                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                 <div class="form-group">
@@ -60,8 +61,10 @@
                     <input type="number" class="form-control" id="character_attribute_wisdom_value"
                            name="character_attribute_wisdom_value" placeholder="Sabedoria do personagem"></input>
                 </div>
+                <button type="button" id="roll-dice" class="attribute_roller btn btn-secondary">Rolar Dados</button>
                 <button type="submit" class="btn btn-primary">Salvar</button>
             </form>
+            </div>
         </t>
     </template>
 </odoo>
