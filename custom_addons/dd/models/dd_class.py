@@ -6,3 +6,4 @@ class DDClass(models.Model):
 
     class_name = fields.Char(string="Nome da Classe")
     class_skill = fields.Char(string="Habilidade da Classe")
+    class_hit_points = fields.Integer(string="Pontos de Vida")

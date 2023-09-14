@@ -15,7 +15,7 @@
                            placeholder="Nível do personagem"></input>
                 </div>
                 <div class="form-group">
-                    <label for="character_stamina">Vida</label>
+                    <label for="character_stamina">Stamina</label>
                     <input type="number" class="form-control" id="character_stamina" name="character_stamina"
                            placeholder="Vida do personagem"></input>
                 </div>

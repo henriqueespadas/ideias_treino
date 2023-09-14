@@ -21,6 +21,7 @@
         "static/src/xml/create_character_template.xml",
         "static/src/xml/dd_index_template.xml",
         "static/src/xml/dd_list_characters_template.xml",
+        "static/src/xml/dd_character_template.xml",
     ],
     "installable": True,
     "auto_install": False,

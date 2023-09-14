@@ -7,7 +7,7 @@ class DDCharacter(models.Model):
     character_name = fields.Char(string="Nome")
     character_level = fields.Integer(string="Nível", default=1)
     character_stamina = fields.Float(string="Energia", default=100)
-    character_class_id = fields.Many2one("dd.class", string="Classe")
+    character_class_id = fields.Many2one("dd.class", string="Raça")
     character_attribute_charisma = fields.Many2one(
         "dd.attribute.charisma", string="Carisma"
     )
@@ -49,6 +49,10 @@ class DDCharacter(models.Model):
     character_attribute_charisma_modifier = fields.Integer(
         string="Carisma", related="character_attribute_charisma.charisma_modifier"
     )
+    character_hit_points = fields.Integer(string="Pontos de Vida", default=0)
+    character_hit_points_max = fields.Integer(string="Pontos de Vida Máximo", default=0)
+    character_experience = fields.Integer(string="Experiência", default=0)
+    character_hit_points_temporary = fields.Integer(string="Pontos de Vida Temporários")
 
     def level_up(self):
         self.character_level += 1

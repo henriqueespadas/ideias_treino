@@ -1,0 +1,65 @@
+<odoo>
+
+    <template id="dd_character_template" name="Character Template">
+        <t t-call="website.layout">
+            <t t-set="title">Dungeons And Dragons</t>
+            <div class="container">
+                <h1>Ficha Do Personagem</h1>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Nível</th>
+                                    <th>Vida</th>
+                                    <th>Classe</th>
+                                    <th>Carisma</th>
+                                    <th>Constituição</th>
+                                    <th>Destreza</th>
+                                    <th>Inteligência</th>
+                                    <th>Força</th>
+                                    <th>Sabedoria</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <t t-esc="character.character_name"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="character.character_level"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="character.character_stamina"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="character.character_class_id.class_name"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="character.character_attribute_charisma_value"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="character.character_attribute_constitution_value"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="character.character_attribute_dexterity_value"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="character.character_attribute_intelligence_value"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="character.character_attribute_strength_value"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="character.character_attribute_wisdom_value"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

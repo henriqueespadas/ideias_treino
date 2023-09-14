@@ -28,7 +28,7 @@
                             <tbody>
                             <t t-foreach="characters" t-as="character">
                                 <tr>
-                                    <td><t t-esc="character.character_name"/></td>
+                                    <td><a t-esc="character.character_name" t-attf-href="/character/#{character.id}"><t t-esc="character.character_name"/></a></td>
                                     <td><t t-esc="character.character_level"/></td>
                                     <td><t t-esc="character.character_stamina"/></td>
                                     <td><t t-esc="character.character_class_id.class_name"/></td>

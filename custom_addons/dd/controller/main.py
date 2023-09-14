@@ -103,10 +103,21 @@ class MainController(http.Controller):
     @http.route("/list_characters", type="http", auth="user", website=True)
     def list_characters(self, **kwargs):
         characters = request.env["dd.character"].sudo().search([])
-        return request.render("dd.dd_list_characters_template", {"characters": characters})
+        return request.render(
+            "dd.dd_list_characters_template", {"characters": characters}
+        )
 
-    @http.route(['/save_dice_roll'], type='json', auth='public')
+    @http.route(["/save_dice_roll"], type="json", auth="public")
     def save_dice_roll(self, **kwargs):
-        roll_result = kwargs.get('roll_result', 0)
+        roll_result = kwargs.get("roll_result", 0)
         print(roll_result)
         # Faça algo com roll_result, como salvar em um modelo Odoo
+
+    @http.route(
+        "/character/<model('dd.character'):character>",
+        type="http",
+        auth="user",
+        website=True,
+    )
+    def character(self, character, **kwargs):
+        return request.render("dd.dd_character_template", {"character": character})
