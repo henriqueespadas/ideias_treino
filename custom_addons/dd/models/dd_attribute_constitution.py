@@ -13,15 +13,15 @@ class CharacterAttributeConstitution(models.Model):
     constitution_modifier = fields.Integer(
         string="Modifier", compute="_compute_modifier", store=True
     )
-    constitution_description = fields.Text(
-        string="Description",
-        default="A Constituição mede a saúde, resistência e vitalidade do personagem.",
-    )
     constitution_min_value = fields.Integer(
         string="Minimum Value", default=1, readonly=True
     )
     constitution_max_value = fields.Integer(
         string="Maximum Value", default=20, readonly=True
+    )
+    constitution_description = fields.Text(
+        string="Description",
+        default="A Constituição mede a saúde, resistência e vitalidade do personagem.",
     )
 
     @api.depends("constitution_value")

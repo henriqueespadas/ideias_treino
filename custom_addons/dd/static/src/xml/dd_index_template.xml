@@ -16,7 +16,7 @@
 <!--                        <a href="/equipment" class="btn btn-primary">Equipamentos</a>-->
 <!--                        <a href="/quest" class="btn btn-primary">Quests</a>-->
 <!--                        <a href="/skill" class="btn btn-primary">Skills</a>-->
-<!--                        <a href="/monster" class="btn btn-primary">Monstros</a>-->
+                        <a href="/list_monster" class="btn btn-primary">Monstros</a>
                     </div>
                 </div>
             </div>

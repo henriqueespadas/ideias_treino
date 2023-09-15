@@ -13,15 +13,15 @@ class CharacterAttributeCharisma(models.Model):
     charisma_modifier = fields.Integer(
         string="Modifier", compute="_compute_modifier", store=True
     )
-    charisma_description = fields.Text(
-        string="Description",
-        default="O Carisma mede a força de personalidade, persuasão, e liderança.",
-    )
     charisma_min_value = fields.Integer(
         string="Minimum Value", default=1, readonly=True
     )
     charisma_max_value = fields.Integer(
         string="Maximum Value", default=20, readonly=True
+    )
+    charisma_description = fields.Text(
+        string="Description",
+        default="O Carisma mede a força de personalidade, persuasão, e liderança.",
     )
 
     @api.depends("charisma_value")

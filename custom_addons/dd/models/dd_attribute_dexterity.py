@@ -13,15 +13,15 @@ class CharacterAttributeDexterity(models.Model):
     dexterity_modifier = fields.Integer(
         string="Modifier", compute="_compute_modifier", store=True
     )
-    dexterity_description = fields.Text(
-        string="Description",
-        default="A Destreza mede a agilidade, os reflexos e o equilíbrio.",
-    )
     dexterity_min_value = fields.Integer(
         string="Minimum Value", default=1, readonly=True
     )
     dexterity_max_value = fields.Integer(
         string="Maximum Value", default=20, readonly=True
+    )
+    dexterity_description = fields.Text(
+        string="Description",
+        default="A Destreza mede a agilidade, os reflexos e o equilíbrio.",
     )
 
     @api.depends("dexterity_value")

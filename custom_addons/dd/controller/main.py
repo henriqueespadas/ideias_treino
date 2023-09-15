@@ -121,3 +121,12 @@ class MainController(http.Controller):
     )
     def character(self, character, **kwargs):
         return request.render("dd.dd_character_template", {"character": character})
+
+    @http.route(
+        "/monster/<model('dd.monster'):monster>",
+        type="http",
+        auth="user",
+        website=True,
+    )
+    def dd_monster(self, monster, **kwargs):
+        return request.render("dd.dd_monster_template", {"monster": monster})

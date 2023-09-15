@@ -1,5 +1,4 @@
 <odoo>
-
     <template id="dd_character_template" name="Character Template">
         <t t-call="website.layout">
             <t t-set="title">Dungeons And Dragons</t>
@@ -7,56 +6,19 @@
                 <h1>Ficha Do Personagem</h1>
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>Nível</th>
-                                    <th>Vida</th>
-                                    <th>Classe</th>
-                                    <th>Carisma</th>
-                                    <th>Constituição</th>
-                                    <th>Destreza</th>
-                                    <th>Inteligência</th>
-                                    <th>Força</th>
-                                    <th>Sabedoria</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <t t-esc="character.character_name"/>
-                                    </td>
-                                    <td>
-                                        <t t-esc="character.character_level"/>
-                                    </td>
-                                    <td>
-                                        <t t-esc="character.character_stamina"/>
-                                    </td>
-                                    <td>
-                                        <t t-esc="character.character_class_id.class_name"/>
-                                    </td>
-                                    <td>
-                                        <t t-esc="character.character_attribute_charisma_value"/>
-                                    </td>
-                                    <td>
-                                        <t t-esc="character.character_attribute_constitution_value"/>
-                                    </td>
-                                    <td>
-                                        <t t-esc="character.character_attribute_dexterity_value"/>
-                                    </td>
-                                    <td>
-                                        <t t-esc="character.character_attribute_intelligence_value"/>
-                                    </td>
-                                    <td>
-                                        <t t-esc="character.character_attribute_strength_value"/>
-                                    </td>
-                                    <td>
-                                        <t t-esc="character.character_attribute_wisdom_value"/>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div><strong>Nome: </strong><t t-esc="character.character_name"/></div>
+                        <div><strong>Nível: </strong><t t-esc="character.character_level"/></div>
+                        <div><strong>Stamina: </strong><t t-esc="character.character_stamina"/></div>
+                        <div><strong>Vida Atual: </strong><t t-esc="character.character_hit_points"/></div>
+                        <div><strong>Vida Maxima: </strong><t t-esc="character.character_hit_points_max"/></div>
+                        <div><strong>Experiência: </strong><t t-esc="character.character_experience"/></div>
+                        <div><strong>Classe: </strong><t t-esc="character.character_class_id.class_name"/></div>
+                        <div><strong>Carisma: </strong><t t-esc="character.character_attribute_charisma_value"/></div>
+                        <div><strong>Constituição: </strong><t t-esc="character.character_attribute_constitution_value"/></div>
+                        <div><strong>Destreza: </strong><t t-esc="character.character_attribute_dexterity_value"/></div>
+                        <div><strong>Inteligência: </strong><t t-esc="character.character_attribute_intelligence_value"/></div>
+                        <div><strong>Força: </strong><t t-esc="character.character_attribute_strength_value"/></div>
+                        <div><strong>Sabedoria: </strong><t t-esc="character.character_attribute_wisdom_value"/></div>
                     </div>
                 </div>
             </div>

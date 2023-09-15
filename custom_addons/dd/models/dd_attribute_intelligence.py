@@ -10,18 +10,18 @@ class CharacterAttributeIntelligence(models.Model):
         string="Attribute Name", default="Inteligência", readonly=True
     )
     intelligence_value = fields.Integer(string="Value", required=True)
+    intelligence_min_value = fields.Integer(
+        string="Minimum Value", default=1, readonly=True
+    )
     intelligence_modifier = fields.Integer(
         string="Modifier", compute="_compute_modifier", store=True
+    )
+    intelligence_max_value = fields.Integer(
+        string="Maximum Value", default=20, readonly=True
     )
     intelligence_description = fields.Text(
         string="Description",
         default="A Inteligência mede a acuidade mental, precisão de raciocínio, e a capacidade de aprender.",
-    )
-    intelligence_min_value = fields.Integer(
-        string="Minimum Value", default=1, readonly=True
-    )
-    intelligence_max_value = fields.Integer(
-        string="Maximum Value", default=20, readonly=True
     )
 
     @api.depends("intelligence_value")

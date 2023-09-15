@@ -11,15 +11,15 @@ class CharacterAttributeStrong(models.Model):
     strength_modifier = fields.Integer(
         string="Modifier", compute="_compute_modifier", store=True
     )
-    strength_description = fields.Text(
-        string="Description",
-        default="A Força mede o poder físico bruto, treinamento atlético e a extensão à qual você pode exercer força bruta.",
-    )
     strength_min_value = fields.Integer(
         string="Minimum Value", default=1, readonly=True
     )
     strength_max_value = fields.Integer(
         string="Maximum Value", default=20, readonly=True
+    )
+    strength_description = fields.Text(
+        string="Description",
+        default="A Força mede o poder físico bruto, treinamento atlético e a extensão à qual você pode exercer força bruta.",
     )
 
     @api.depends("strength_value")

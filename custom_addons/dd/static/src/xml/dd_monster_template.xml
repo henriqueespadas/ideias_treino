@@ -1,0 +1,17 @@
+<odoo>
+    <template id="dd_monster_template" name="Monster Template">
+        <t t-call="website.layout">
+            <t t-set="title">Dungeons And Dragons</t>
+            <div class="container">
+                <h1>Ficha Do Monstro</h1>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div><strong>Nome: </strong><t t-esc="monster.monster_name"/></div>
+                        <div><strong>HP: </strong><t t-esc="monster_hp"/></div>
+                        <div><strong>Tipo: </strong><t t-esc="monster_type"/></div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
